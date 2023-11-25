@@ -50,9 +50,9 @@ class Solution:
 
 
 if __name__ == '__main__':
-    tc = int(input())
+    tc = int(input("Times: "))
     while tc > 0:
-        n = int(input())
+        n = int(input("Number: "))
         ob = Solution()
         ans = ob.nthRowOfPascalTriangle(n)
         for x in ans:

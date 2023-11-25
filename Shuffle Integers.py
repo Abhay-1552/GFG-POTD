@@ -30,15 +30,21 @@ Constraints:
 
 class Solution:
     def shuffleArray(self, arr, n):
-        print("Hello")
+        stk = []
+        mid = n // 2
+        for i in range(0, mid):
+            stk.append(arr[i])
+            stk.append(arr[mid + i])
+        arr.clear()
+        arr.extend(stk)
 
 
 if __name__ == '__main__':
 
-    t = int(input())
+    t = int(input("Times: "))
     for _ in range(0, t):
-        n = int(input())
-        a = list(map(int, input().split()))
+        n = int(input("Number: "))
+        a = list(map(int, input("Array: ").split()))
         ob = Solution()
         ob.shuffleArray(a, n)
         print(*a)
